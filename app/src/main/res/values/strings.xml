@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Atv11 CRUD SQLite Time</string>
+    <string name="nome_aluno">Matheus Augusto Marti</string>
+    <string name="ra_aluno">RA: 1110482313017</string>
+    <string name="inicio">Gerência de Times</string>
+    <string name="nome">Nome</string>
+    <string name="codigo">Código</string>
+    <string name="cidade">Cidade</string>
+    <string name="time">Time</string>
+    <string name="jogador">Jogador</string>
+    <string name="id">Id</string>
+    <string name="nascimento">Data de Nascimento</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="inserir">Inserir</string>
+    <string name="modificar">Modificar</string>
+    <string name="excluir">Excluir</string>
+    <string name="buscar">Buscar</string>
+    <string name="listar">Listar</string>
+</resources>
