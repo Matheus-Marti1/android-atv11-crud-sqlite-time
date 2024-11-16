@@ -119,7 +119,8 @@ public class JogadorFragment extends Fragment {
     }
 
     private void acaoBuscar() {
-        Jogador jogador = montaJogador();
+        Jogador jogador = new Jogador();
+        jogador.setId(Integer.parseInt(etIdJogador.getText().toString()));
         try {
             times = tCont.listar();
             jogador = jCont.buscar(jogador);
@@ -168,7 +169,7 @@ public class JogadorFragment extends Fragment {
         j.setId(Integer.parseInt(etIdJogador.getText().toString()));
         j.setNome(etNomeJogador.getText().toString());
         String dataTexto = etDataNascJogador.getText().toString();
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate data = LocalDate.parse(dataTexto, formato);
         j.setDataNasc(data);
         j.setAltura(Float.parseFloat(etAlturaJogador.getText().toString()));
@@ -181,8 +182,8 @@ public class JogadorFragment extends Fragment {
         etIdJogador.setText(String.valueOf(j.getId()));
         etNomeJogador.setText(j.getNome());
         etDataNascJogador.setText(String.valueOf(j.getDataNasc()));
-        etAlturaJogador.setText((int) j.getAltura());
-        etPesoJogador.setText((int) j.getPeso());
+        etAlturaJogador.setText(String.valueOf(j.getAltura()));
+        etPesoJogador.setText(String.valueOf(j.getPeso()));
 
         int cont = 1;
         for (Time t : times) {

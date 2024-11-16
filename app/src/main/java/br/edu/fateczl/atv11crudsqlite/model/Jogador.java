@@ -4,6 +4,8 @@
 
 package br.edu.fateczl.atv11crudsqlite.model;
 
+import androidx.annotation.NonNull;
+
 import java.time.LocalDate;
 
 public class Jogador {
@@ -66,6 +68,7 @@ public class Jogador {
         this.time = time;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return id + " - " + time.getNome() + " - " + nome + " - " +

@@ -4,6 +4,8 @@
 
 package br.edu.fateczl.atv11crudsqlite.model;
 
+import androidx.annotation.NonNull;
+
 public class Time {
     private int codigo;
     private String nome;
@@ -37,6 +39,7 @@ public class Time {
         this.cidade = cidade;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return codigo + " - " + cidade + " - " + nome;
