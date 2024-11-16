@@ -14,17 +14,17 @@ public class GenericDao extends SQLiteOpenHelper {
     private static final int DATABASE_VER = 1;
     private static final String CREATE_TABLE_TIME =
             "CREATE TABLE time ( " +
-                    "codigo INT NOT NULL PRIMARY KEY, " +
-                    "nome TEXT NOT NULL, " +
-                    "cidade TEXT NOT NULL);";
+                    "codigo INTEGER(10) NOT NULL PRIMARY KEY, " +
+                    "nome VARCHAR(50) NOT NULL, " +
+                    "cidade VARCHAR(80) NOT NULL);";
     private static final String CREATE_TABLE_JOGADOR =
             "CREATE TABLE jogador ( " +
-                    "id INT NOT NULL PRIMARY KEY, " +
-                    "nome TEXT NOT NULL, " +
-                    "data_nasc TEXT NOT NULL, " +
-                    "altura REAL NOT NULL, " +
-                    "peso REAL NOT NULL, " +
-                    "codigo_time INT NOT NULL, " +
+                    "id INTEGER(10) NOT NULL PRIMARY KEY, " +
+                    "nome VARCHAR(100) NOT NULL, " +
+                    "data_nasc DATE NOT NULL, " +
+                    "altura DECIMAL(4,2) NOT NULL, " +
+                    "peso DECIMAL(4,1) NOT NULL, " +
+                    "codigo_time INTEGER(10) NOT NULL, " +
                     "FOREIGN KEY (codigo_time) REFERENCES time(codigo));";
 
     public GenericDao(Context context) {
